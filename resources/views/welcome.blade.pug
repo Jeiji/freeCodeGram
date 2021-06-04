@@ -19,9 +19,9 @@ body
       | @auth
       a.text-sm.text-gray-700.underline(href="{{ url('/home') }}") Home
         | @else
-      a.text-sm.text-gray-700.underline(href="{{ route('login') }}") Log in
+      a.text-sm.text-gray-700.underline(href= $route('login') ) Log in
           | @if (Route::has('register'))
-      a.ml-4.text-sm.text-gray-700.underline(href="{{ route('register') }}") Register
+      a.ml-4.text-sm.text-gray-700.underline( href=  $route('register') ) Register
         | @endif
       | @endauth
     | @endif
